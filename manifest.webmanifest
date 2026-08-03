@@ -1,0 +1,22 @@
+{
+  "name": "TESDA CSS NC II Complete Reviewer",
+  "short_name": "CSS NC II",
+  "description": "Responsive offline reviewer for the supplied TESDA CSS NC II Modules 1 through 5, with privacy-safe source pages and interactive activities.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#0d3b66",
+  "icons": [
+    {
+      "src": "assets/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "assets/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
