@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#0d3b66">
+  <meta name="description" content="Complete responsive TESDA CSS NC II reviewer built from the supplied Modules 1 through 5 lesson PDFs, with privacy-safe source pages, interactive activities, tests, flashcards, and offline support.">
+  <title>TESDA CSS NC II Complete Reviewer</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/icons/icon-192.png">
+  <link rel="apple-touch-icon" href="assets/icons/icon-192.png">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#mainContent">Skip to main content</a>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <div class="brand-logo">CSS</div>
+        <div><strong>CSS NC II Reviewer</strong><span>Modules 1–5</span></div>
+      </div>
+      <nav class="nav-list" id="navList">
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span>Dashboard</button>
+        <button class="nav-item" data-view="modules"><span>▤</span>Modules & Lessons</button>
+        <button class="nav-item" data-view="activities"><span>◫</span>Interactive Activities</button>
+        <button class="nav-item" data-view="flashcards"><span>▱</span>Flashcards</button>
+        <button class="nav-item" data-view="assessment"><span>✓</span>Practice Test</button>
+        <button class="nav-item" data-view="glossary"><span>A–Z</span>Glossary</button>
+        <button class="nav-item" data-view="sources"><span>⇩</span>Source Modules</button>
+        <button class="nav-item" data-view="about"><span>ℹ</span>About</button>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="side-progress"><div><b id="sideProgressText">0% complete</b><span id="sideProgressMeta">0 of 26 lessons</span></div><div class="progress-track"><i id="sideProgressBar"></i></div></div>
+        <button class="nav-item" data-view="settings"><span>⚙</span>Settings & Backup</button>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
+    <section class="workspace">
+      <header class="topbar">
+        <button class="icon-btn menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+        <div class="topbar-title"><h1 id="pageTitle">Dashboard</h1><p id="pageSubtitle">Complete reviewer for the supplied TESDA CSS NC II modules.</p></div>
+        <div class="topbar-actions">
+          <button class="icon-btn" id="searchBtn" aria-label="Search">⌕</button>
+          <button class="icon-btn" id="themeBtn" aria-label="Toggle theme">◐</button>
+          <button class="profile-chip" id="profileBtn"><span id="profileInitial">L</span><b id="profileName">Learner</b></button>
+        </div>
+      </header>
+      <main class="main-content" id="mainContent" tabindex="-1">
+        <section class="view active" id="view-dashboard"></section>
+        <section class="view" id="view-modules"></section>
+        <section class="view" id="view-lesson"></section>
+        <section class="view" id="view-activities"></section>
+        <section class="view" id="view-activity"></section>
+        <section class="view" id="view-flashcards"></section>
+        <section class="view" id="view-assessment"></section>
+        <section class="view" id="view-quiz"></section>
+        <section class="view" id="view-results"></section>
+        <section class="view" id="view-glossary"></section>
+        <section class="view" id="view-sources"></section>
+        <section class="view" id="view-settings"></section>
+        <section class="view" id="view-about"></section>
+      </main>
+    </section>
+  </div>
+
+  <dialog id="searchDialog" class="dialog search-dialog">
+    <div class="dialog-card">
+      <div class="dialog-head"><div><h2>Search all lessons</h2><p>Search titles, topics, extracted source text, activities, and glossary terms.</p></div><button class="icon-btn" data-close-dialog="searchDialog">×</button></div>
+      <label class="search-box"><span>⌕</span><input id="globalSearch" type="search" placeholder="Type a keyword…" autocomplete="off"></label>
+      <div class="search-results" id="searchResults"><p class="muted">Enter at least two characters.</p></div>
+    </div>
+  </dialog>
+
+  <dialog id="imageDialog" class="dialog image-dialog">
+    <div class="image-dialog-head"><div><b id="imageDialogTitle">Lesson page</b><span id="imageDialogMeta"></span></div><div><button class="icon-btn" id="zoomOutBtn">−</button><button class="icon-btn" id="zoomResetBtn">100%</button><button class="icon-btn" id="zoomInBtn">+</button><button class="icon-btn" data-close-dialog="imageDialog">×</button></div></div>
+    <div class="image-stage" id="imageStage"><img id="imageDialogImg" alt="Expanded lesson page"></div>
+  </dialog>
+
+  <div class="toast-region" id="toastRegion" aria-live="polite"></div>
+  <noscript><div class="noscript">JavaScript is required to use this reviewer.</div></noscript>
+  <script src="js/data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
